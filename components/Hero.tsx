@@ -44,12 +44,13 @@ export default function Hero() {
             <FadeInElement direction="up" delay={0.1}>
               <div className="text-center lg:text-left">
                 <h1 className="mb-4 md:mb-6 text-3xl sm:text-4xl md:text-5xl lg:text-6xl">
-                  Hi! I'm John Mhel Dalumpines
+                  Hi! 
+                  I'm John Mhel Dalumpines
                 </h1>
 
                 <p className="text-base sm:text-lg md:text-xl text-gray-600 mb-6 md:mb-8 max-w-xl mx-auto lg:mx-0">
-                  Computer Science student specializing in full-stack development and UI/UX Designs with a passion
-                  for creating innovative software solutions.
+                  Full-Stack Developer & UI/UX Designer specializing in modern web technologies. 
+                   A Computer Science student building innovative solutions that make a difference.
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-3 md:gap-4 mb-10 md:mb-16 justify-center lg:justify-start">
