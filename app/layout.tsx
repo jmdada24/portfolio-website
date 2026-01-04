@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "John Mhel Dalumpines | Full-Stack Developer & UI/UX Designer",
-  description: "Computer Science student specializing in full-stack development and UI/UX design. Passionate about creating innovative software solutions with React, Node.js, and modern web technologies.",
+  description: "Full-Stack Developer & UI/UX Designer specializing in modern web technologies. A Computer Science student building innovative solutions that make a difference.",
   keywords: [
     "John Mhel Dalumpines",
     "JMD Portfolio",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://jmd-portfolio-website-27.vercel.app",
+    url: "https://jm-dalumpines.vercel.app/",
     title: "John Mhel Dalumpines | Full-Stack Developer & UI/UX Designer",
     description: "Computer Science student specializing in full-stack development and UI/UX design. Passionate about creating innovative software solutions.",
     siteName: "JMD Portfolio",
@@ -65,7 +65,7 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    google: "your-google-verification-code", // Add after Google Search Console setup
+    google: "FSjA4Ep01-BP72k4yylZpvtF_OIKWOarVZx2KrGd0iI", // Add after Google Search Console setup
   },
 };
 
@@ -77,7 +77,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <link rel="canonical" href="https://jmd-portfolio-website-27.vercel.app" />
+        <link rel="canonical" href="https://jm-dalumpines.vercel.app" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </head>
       <body

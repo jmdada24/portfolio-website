@@ -11,8 +11,8 @@ export default function Home() {
     "@context": "https://schema.org",
     "@type": "Person",
     "name": "John Mhel Dalumpines",
-    "url": "https://jmd-portfolio-website-27.vercel.app",
-    "image": "https://jmd-portfolio-website-27.vercel.app/assets/images/jm-image.jpeg",
+    "url": "https://jm-dalumpines.vercel.app",
+    "image": "https://jm-dalumpines.vercel.app/assets/images/jm-image.jpeg",
     "sameAs": [
       "https://github.com/jmdada24",
       "https://www.linkedin.com/in/john-mhel-dalumpines-3853412a5/",
