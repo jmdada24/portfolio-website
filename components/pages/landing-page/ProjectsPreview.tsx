@@ -52,68 +52,74 @@ export default function ProjectsPreview() {
 
         <div className="grid gap-6 md:grid-cols-2">
           {projects.map((project, index) => (
-            <Link key={project.title} href="/projects" className="block">
-              <motion.article
-                initial={{ opacity: 0, y: 28 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: '-60px' }}
-                transition={{ duration: 0.55, delay: index * 0.12 }}
-                whileHover={{ y: -4 }}
-                className="overflow-hidden rounded-3xl border border-border bg-card shadow-sm transition-colors hover:border-primary/30"
-              >
-                <div className="relative h-48 overflow-hidden bg-primary p-6">
-                  <div className="absolute inset-0 opacity-10 [background-image:linear-gradient(rgba(255,255,255,0.6)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.6)_1px,transparent_1px)] [background-size:28px_28px]" />
-                  <div className="absolute right-4 top-4 rounded-full border border-white/20 bg-black/30 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.14em] text-white backdrop-blur-sm">
-                    {project.category}
-                  </div>
+            <motion.article
+              key={project.title}
+              initial={{ opacity: 0, y: 28 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: '-60px' }}
+              transition={{ duration: 0.55, delay: index * 0.12 }}
+              whileHover={{ y: -4 }}
+              className="overflow-hidden rounded-3xl border border-border bg-card shadow-sm transition-colors hover:border-primary/30"
+            >
+              <div className="relative h-48 overflow-hidden bg-primary p-6">
+                <div className="absolute inset-0 opacity-10 [background-image:linear-gradient(rgba(255,255,255,0.6)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.6)_1px,transparent_1px)] [background-size:28px_28px]" />
+                <div className="absolute right-4 top-4 rounded-full border border-white/20 bg-black/30 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.14em] text-white backdrop-blur-sm">
+                  {project.category}
+                </div>
+              </div>
+
+              <div className="flex h-full flex-col p-6">
+                <div className="mb-3 flex items-start justify-between gap-3">
+                  <h3 className="text-xl font-bold text-foreground">{project.title}</h3>
+                  <span className="text-sm text-muted-foreground">{project.year}</span>
                 </div>
 
-                <div className="flex h-full flex-col p-6">
-                  <div className="mb-3 flex items-start justify-between gap-3">
-                    <h3 className="text-xl font-bold text-foreground">{project.title}</h3>
-                    <span className="text-sm text-muted-foreground">{project.year}</span>
-                  </div>
+                <p className="mb-5 text-sm leading-7 text-muted-foreground">
+                  {project.description}
+                </p>
 
-                  <p className="mb-5 text-sm leading-7 text-muted-foreground">
-                    {project.description}
-                  </p>
-
-                  <div className="mb-6 flex flex-wrap gap-2">
-                    {project.technologies.map((tech) => (
-                      <span
-                        key={tech}
-                        className="rounded-full border border-primary/25 bg-primary/10 px-3 py-1 text-xs font-medium text-primary"
-                      >
-                        {tech}
-                      </span>
-                    ))}
-                  </div>
-
-                  <div className="mt-auto flex items-center justify-between">
-                    <div className="flex items-center gap-2">
-                      <a
-                        href={project.demo}
-                        onClick={(e) => e.stopPropagation()}
-                        className="inline-flex h-9 items-center gap-2 rounded-lg bg-primary px-3 text-xs font-semibold text-primary-foreground hover:bg-primary/90"
-                      >
-                        <ExternalLink className="h-3.5 w-3.5" />
-                        Demo
-                      </a>
-
-                      <a
-                        href={project.github}
-                        onClick={(e) => e.stopPropagation()}
-                        className="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-primary/25 bg-primary/10 text-primary hover:bg-primary/15"
-                      >
-                        <Github className="h-4 w-4" />
-                      </a>
-                    </div>
-
-                    <span className="text-xs font-semibold text-primary">Read story →</span>
-                  </div>
+                <div className="mb-6 flex flex-wrap gap-2">
+                  {project.technologies.map((tech) => (
+                    <span
+                      key={tech}
+                      className="rounded-full border border-primary/25 bg-primary/10 px-3 py-1 text-xs font-medium text-primary"
+                    >
+                      {tech}
+                    </span>
+                  ))}
                 </div>
-              </motion.article>
-            </Link>
+
+                <div className="mt-auto flex items-center justify-between">
+                  <div className="flex items-center gap-2">
+                    <a
+                      href={project.demo}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex h-9 items-center gap-2 rounded-lg bg-primary px-3 text-xs font-semibold text-primary-foreground hover:bg-primary/90"
+                    >
+                      <ExternalLink className="h-3.5 w-3.5" />
+                      Demo
+                    </a>
+
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex h-9 w-9 items-center justify-center rounded-lg border border-primary/25 bg-primary/10 text-primary hover:bg-primary/15"
+                    >
+                      <Github className="h-4 w-4" />
+                    </a>
+                  </div>
+
+                  <Link
+                    href="/projects"
+                    className="text-xs font-semibold text-primary hover:underline"
+                  >
+                    Read story →
+                  </Link>
+                </div>
+              </div>
+            </motion.article>
           ))}
         </div>
 

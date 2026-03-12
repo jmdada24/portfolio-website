@@ -1,8 +1,13 @@
 'use client';
 
+import Link from 'next/link';
+import { usePathname, useRouter } from 'next/navigation';
 import { Facebook, Github, Linkedin, Mail } from 'lucide-react';
 
 export default function Footer() {
+  const pathname = usePathname();
+  const router = useRouter();
+
   const socialLinks = [
     {
       name: 'GitHub',
@@ -27,16 +32,17 @@ export default function Footer() {
   ];
 
   const quickLinks = [
-    { name: 'Home', path: '#home' },
-    { name: 'Contact', path: '#contact' },
+    { name: 'Home', section: 'home' },
+    { name: 'Contact', section: 'contact' },
   ];
 
-  const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, path: string) => {
-    e.preventDefault();
+  const scrollToSection = (sectionId: 'home' | 'contact') => {
+    if (pathname !== '/') {
+      router.push(sectionId === 'home' ? '/' : `/#${sectionId}`);
+      return;
+    }
 
-    const targetId = path.replace('#', '');
-    const element = document.getElementById(targetId);
-
+    const element = document.getElementById(sectionId);
     if (!element) return;
 
     const offset = 80;
@@ -70,31 +76,33 @@ export default function Footer() {
             </h4>
             <ul className="space-y-3">
               {quickLinks.map((link) => (
-                <li key={link.path}>
-                  <a
-                    href={link.path}
-                    onClick={(e) => handleLinkClick(e, link.path)}
+                <li key={link.section}>
+                  <button
+                    type="button"
+                    onClick={() => scrollToSection(link.section as 'home' | 'contact')}
                     className="text-sm text-muted-foreground transition-colors hover:text-primary md:text-base"
                   >
                     {link.name}
-                  </a>
+                  </button>
                 </li>
               ))}
+
               <li>
-                <a
+                <Link
                   href="/about"
                   className="text-sm text-muted-foreground transition-colors hover:text-primary md:text-base"
                 >
                   About
-                </a>
+                </Link>
               </li>
+
               <li>
-                <a
+                <Link
                   href="/projects"
                   className="text-sm text-muted-foreground transition-colors hover:text-primary md:text-base"
                 >
                   Projects
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
