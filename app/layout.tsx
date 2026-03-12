@@ -27,6 +27,7 @@ export const metadata: Metadata = {
     "University of Mindanao",
     "JavaScript Developer",
     "TypeScript Developer",
+    "AI Engineer"
   ],
   authors: [{ name: "John Mhel Dalumpines" }],
   creator: "John Mhel Dalumpines",
@@ -65,7 +66,7 @@ export const metadata: Metadata = {
     },
   },
   verification: {
-    google: "FSjA4Ep01-BP72k4yylZpvtF_OIKWOarVZx2KrGd0iI", // Add after Google Search Console setup
+    google: "FSjA4Ep01-BP72k4yylZpvtF_OIKWOarVZx2KrGd0iI",
   },
 };
 
@@ -75,7 +76,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className="dark">
       <head>
         <link rel="canonical" href="https://jm-dalumpines.vercel.app" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />

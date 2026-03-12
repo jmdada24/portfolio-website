@@ -1,0 +1,56 @@
+'use client';
+
+import { useEffect, useState } from 'react';
+import { AnimatePresence, motion } from 'framer-motion';
+import Navbar from '@/components/Navbar';
+import Hero from '@/components/pages/landing-page/Hero';
+import ProjectsPreview from '@/components/pages/landing-page/ProjectsPreview';
+import Contact from '@/components/pages/landing-page/Contact';
+import Footer from '@/components/pages/landing-page/Footer';
+import PageLoader from '@/components/pages/landing-page/PageLoader';
+
+export default function HomeClient() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = window.setTimeout(() => {
+      setLoading(false);
+    }, 1400);
+
+    return () => window.clearTimeout(timer);
+  }, []);
+
+  return (
+    <>
+      <PageLoader isVisible={loading} />
+
+      <AnimatePresence mode="wait">
+        {!loading && (
+          <motion.div
+            key="home-content"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.45, ease: 'easeOut' }}
+          >
+            <Navbar />
+            <main>
+              <div id="home">
+                <Hero />
+              </div>
+
+              <div id="projects">
+                <ProjectsPreview />
+              </div>
+
+              <div id="contact">
+                <Contact />
+              </div>
+            </main>
+            <Footer />
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </>
+  );
+}
