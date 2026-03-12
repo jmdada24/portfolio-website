@@ -69,7 +69,7 @@ export default function Hero() {
       <GlowOrb className="bottom-[8%] right-[18%] h-36 w-36 sm:h-52 sm:w-52" />
 
       <SectionGrid opacity="opacity-[0.02]" />
-      
+
       <div className="relative z-[5] mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-10 px-4 sm:px-6 lg:grid-cols-2 lg:gap-16 lg:px-8">
         {/* IMAGE FIRST ON MOBILE, RIGHT ON DESKTOP */}
         <motion.div
@@ -149,8 +149,7 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.52 }}
             className="mx-auto mb-8 max-w-xl text-sm leading-7 text-muted-foreground sm:text-base sm:leading-8 lg:mx-0"
           >
-            Computer Science student specializing in full-stack development and UI/UX design. Passionate about creating innovative software solutions.
-          </motion.p>
+            Computer Science student and developer specializing in full-stack development, UI/UX design, and AI-driven solutions. I build modern, scalable web applications and thoughtful digital experiences that combine technology, design, and intelligent systems.          </motion.p>
 
           <motion.div
             initial={{ opacity: 0, y: 14 }}
