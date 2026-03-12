@@ -17,7 +17,7 @@ export default function Home() {
       'https://www.linkedin.com/in/john-mhel-dalumpines-3853412a5/',
       'https://www.facebook.com/jm.jayem.75',
     ],
-    jobTitle: 'Full-Stack Developer & UI/UX Designer',
+    jobTitle: 'Full-Stack Developer & UI/UX Designer & AI Engineer',
     worksFor: {
       '@type': 'Organization',
       name: 'University of Mindanao',
