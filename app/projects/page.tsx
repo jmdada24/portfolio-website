@@ -1,4 +1,3 @@
-import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ProjectsHeader from "@/components/pages/projects/ProjectsHeader";
 import ProjectsGrid from "@/components/pages/projects/ProjectsGrid";
@@ -12,7 +11,6 @@ export const metadata = {
 export default function ProjectsPage() {
   return (
     <>
-      <Navbar />
       <main className="bg-background text-foreground">
         <ProjectsHeader />
         <ProjectsGrid />

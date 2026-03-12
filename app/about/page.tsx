@@ -1,4 +1,3 @@
-import Navbar from '@/components/Navbar';
 import AboutMe from '@/components/pages/about/AboutMe';
 import Certification from '@/components/pages/about/Certification';
 import Education from '@/components/pages/about/Education';
@@ -14,11 +13,10 @@ export const metadata = {
 
 
 export default function AboutPage() {
-
   
   return (
     <>
-      <Navbar/>
+     
       <main className="bg-background text-foreground">
         
         <AboutMe />

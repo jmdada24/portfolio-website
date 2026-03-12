@@ -2,17 +2,41 @@
 
 import { useEffect, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
-import Navbar from '@/components/Navbar';
 import Hero from '@/components/pages/landing-page/Hero';
 import ProjectsPreview from '@/components/pages/landing-page/ProjectsPreview';
 import Contact from '@/components/pages/landing-page/Contact';
 import Footer from '@/components/Footer';
 import PageLoader from '@/components/pages/landing-page/PageLoader';
 
+const HOME_ENTRY_KEY = 'home-entry-loader-shown';
+
 export default function HomeClient() {
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
+    const navigationEntry = performance.getEntriesByType('navigation')[0] as
+      | PerformanceNavigationTiming
+      | undefined;
+
+    const navType = navigationEntry?.type;
+    const alreadyShownOnThisTab = sessionStorage.getItem(HOME_ENTRY_KEY) === 'true';
+
+    let shouldShowLoader = false;
+
+    if (navType === 'reload') {
+      shouldShowLoader = true;
+    } else if (navType === 'navigate' && !alreadyShownOnThisTab) {
+      shouldShowLoader = true;
+    }
+
+    if (!shouldShowLoader) {
+      setLoading(false);
+      return;
+    }
+
+    sessionStorage.setItem(HOME_ENTRY_KEY, 'true');
+    setLoading(true);
+
     const timer = window.setTimeout(() => {
       setLoading(false);
     }, 1400);
@@ -33,7 +57,6 @@ export default function HomeClient() {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.45, ease: 'easeOut' }}
           >
-            <Navbar />
             <main>
               <div id="home">
                 <Hero />

@@ -130,8 +130,8 @@ export default function TechStack() {
                         </button>
 
                         <div className="relative flex-1 overflow-hidden">
-                            <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-16 bg-gradient-to-r from-background to-transparent" />
-                            <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-16 bg-gradient-to-l from-background to-transparent" />
+                            <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-16 bg-linear-to-r from-background to-transparent" />
+                            <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-16 bg-linear-to-l from-background to-transparent" />
 
                             <div
                                 ref={trackRef}
@@ -144,7 +144,7 @@ export default function TechStack() {
                                         <motion.div
                                             key={`${item.name}-${index}`}
                                             whileHover={{ y: -4, scale: 1.03 }}
-                                            className="flex min-w-[180px] items-center gap-3 rounded-2xl border border-border bg-card px-5 py-4 shadow-sm"
+                                            className="flex min-w-45 items-center gap-3 rounded-2xl border border-border bg-card px-5 py-4 shadow-sm"
                                         >
                                             <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary/10 text-primary">
                                                 <Icon className="h-5 w-5" />
