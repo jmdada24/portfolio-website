@@ -117,7 +117,7 @@ export default function TechStack() {
                             <h2 className="text-3xl font-bold">Tech Stack</h2>
                         </div>
                         <p className="mt-3 pl-14 text-sm text-muted-foreground">
-                            Technologies and tools I&apos;ve learned and used in building projects.
+                            Technologies and tools I've worked with while building projects and exploring different areas of development.
                         </p>
                     </div>
 

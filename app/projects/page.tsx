@@ -1,28 +1,23 @@
-import MindSpace from "./mindspace/page";
-import RealiTech from "./realitech/page";
-import SineSkwelahan from "./sineskwelahan/page";
-import BarangayBayabas from "./barangaybayabas/page";
-
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import ProjectsHeader from "@/components/pages/projects/ProjectsHeader";
+import ProjectsGrid from "@/components/pages/projects/ProjectsGrid";
 
 export const metadata = {
   title: "Projects | John Mhel Dalumpines",
   description:
-    "Explore projects by John Mhel Dalumpines including full-stack web applications, UI/UX designs, and AI-powered systems.",
+    "Explore projects built by John Mhel Dalumpines including full-stack applications, UI/UX design systems, and AI-powered solutions.",
 };
 
-export default function ProjectPage(){
-
-    return(
-        <>
-            <MindSpace/>
-            <RealiTech/>
-            <SineSkwelahan/>
-            <BarangayBayabas/>
-        
-        </>
-
-
-
-    );
-
+export default function ProjectsPage() {
+  return (
+    <>
+      <Navbar />
+      <main className="bg-background text-foreground">
+        <ProjectsHeader />
+        <ProjectsGrid />
+      </main>
+      <Footer />
+    </>
+  );
 }

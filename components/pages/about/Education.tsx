@@ -46,7 +46,7 @@ export default function Education() {
             </p>
           </div>
 
-          <div className="relative border-l border-primary/20 pl-8">
+          <div className="relative border-l border-primary/20 pl-8 space-y-8">
             {educationData.map((item, index) => (
               <motion.div
                 key={index}
