@@ -27,13 +27,13 @@ function GlowOrb({ className }: { className: string }) {
 
 export default function ProjectsPreview() {
   return (
-    <section className="relative overflow-hidden bg-background px-4 py-12 sm:px-6 lg:px-8 lg:py-14">
+    <section className="relative overflow-hidden bg-background px-6 py-14 lg:py-16">
       <GlowOrb className="left-[4%] top-[20%] h-44 w-44" />
       <GlowOrb className="right-[8%] bottom-[10%] h-52 w-52" />
 
       <SectionGrid opacity="opacity-[0.02]" />
 
-      <div className="relative z-[5] mx-auto max-w-7xl">
+      <div className="relative z-[5] mx-auto max-w-6xl">
         <motion.div
           initial={{ opacity: 0, y: 18 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -41,7 +41,7 @@ export default function ProjectsPreview() {
           transition={{ duration: 0.55 }}
           className="mb-12 text-center"
         >
-          <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-5xl">
+          <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl lg:text-5xl">
             Featured Projects
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-sm leading-7 text-muted-foreground sm:text-base">
@@ -61,7 +61,7 @@ export default function ProjectsPreview() {
               whileHover={{ y: -4 }}
               className="overflow-hidden rounded-3xl border border-border bg-card shadow-sm transition-colors hover:border-primary/30"
             >
-              <div className="relative h-48 overflow-hidden bg-primary p-6">
+              <div className="relative h-44 overflow-hidden bg-primary p-6">
                 <div className="absolute inset-0 opacity-10 [background-image:linear-gradient(rgba(255,255,255,0.6)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.6)_1px,transparent_1px)] [background-size:28px_28px]" />
                 <div className="absolute right-4 top-4 rounded-full border border-white/20 bg-black/30 px-3 py-1 text-[10px] font-bold uppercase tracking-[0.14em] text-white backdrop-blur-sm">
                   {project.category}

@@ -79,10 +79,10 @@ export default function Contact() {
   };
 
   return (
-    <section className="relative overflow-hidden px-4 pt-2 pb-14 sm:px-6 md:pt-6 md:pb-16 lg:px-8 lg:pt-8 lg:pb-20">
+    <section className="relative overflow-hidden px-6 pt-4 pb-16 lg:pt-8 lg:pb-20">
       <SectionGrid opacity="opacity-[0.016]" />
 
-      <div className="mx-auto max-w-7xl">
+      <div className="mx-auto max-w-6xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -90,7 +90,7 @@ export default function Contact() {
           transition={{ duration: 0.5 }}
           className="mb-8 text-center md:mb-10"
         >
-          <h2 className="text-3xl font-semibold tracking-tight text-foreground md:text-4xl lg:text-5xl">
+          <h2 className="text-3xl font-semibold tracking-tight text-foreground md:text-4xl lg:text-[2.75rem]">
             Get in Touch
           </h2>
           <p className="mx-auto mt-3 max-w-2xl text-sm leading-relaxed text-muted-foreground md:text-base">
@@ -100,8 +100,7 @@ export default function Contact() {
           <div className="mx-auto mt-4 h-0.5 w-14 rounded-full bg-primary" />
         </motion.div>
 
-        <div className="grid grid-cols-1 gap-6 lg:grid-cols-2 lg:gap-8">
-          {/* Left */}
+        <div className="grid grid-cols-1 gap-6 lg:grid-cols-2 lg:gap-6">
           <motion.div
             initial={{ opacity: 0, x: -24 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -109,7 +108,7 @@ export default function Contact() {
             transition={{ duration: 0.55 }}
             className="rounded-3xl border border-border bg-card p-5 shadow-sm md:p-6"
           >
-            <h3 className="text-xl font-semibold text-foreground md:text-2xl">
+            <h3 className="text-xl font-semibold text-foreground md:text-[1.45rem]">
               Contact Info
             </h3>
             <p className="mt-2 text-sm leading-relaxed text-muted-foreground md:text-base">
@@ -124,17 +123,17 @@ export default function Contact() {
                   <motion.div
                     whileHover={{ x: 4 }}
                     transition={{ duration: 0.2 }}
-                    className="flex items-center gap-3 rounded-2xl border border-border bg-background p-3.5 md:p-4"
+                    className="flex items-center gap-3 rounded-2xl border border-border bg-background p-3.5"
                   >
-                    <div className="flex h-10 w-10 items-center justify-center rounded-xl border border-primary/20 bg-primary/10 text-primary md:h-11 md:w-11">
-                      <Icon className="h-4 w-4 md:h-5 md:w-5" />
+                    <div className="flex h-10 w-10 items-center justify-center rounded-xl border border-primary/20 bg-primary/10 text-primary">
+                      <Icon className="h-4 w-4" />
                     </div>
 
                     <div className="min-w-0">
                       <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-muted-foreground">
                         {item.label}
                       </p>
-                      <p className="mt-1 break-all text-sm font-medium text-foreground md:text-base">
+                      <p className="mt-1 break-all text-sm font-medium text-foreground">
                         {item.value}
                       </p>
                     </div>
@@ -158,10 +157,8 @@ export default function Contact() {
                 );
               })}
             </div>
-
           </motion.div>
 
-          {/* Right */}
           <motion.div
             initial={{ opacity: 0, x: 24 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -169,7 +166,7 @@ export default function Contact() {
             transition={{ duration: 0.55 }}
             className="rounded-3xl border border-border bg-card p-5 shadow-sm md:p-6"
           >
-            <h3 className="text-xl font-semibold text-foreground md:text-2xl">
+            <h3 className="text-xl font-semibold text-foreground md:text-[1.45rem]">
               Send a Message
             </h3>
             <p className="mt-2 text-sm text-muted-foreground md:text-base">
@@ -211,7 +208,7 @@ export default function Contact() {
                 <Label htmlFor="message">Message</Label>
                 <textarea
                   id="message"
-                  rows={5}
+                  rows={4}
                   placeholder="What’s on your mind?"
                   value={formData.message}
                   onChange={(e) =>

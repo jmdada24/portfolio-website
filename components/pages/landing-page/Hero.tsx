@@ -70,15 +70,14 @@ export default function Hero() {
 
       <SectionGrid opacity="opacity-[0.02]" />
 
-      <div className="relative z-[5] mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-10 px-4 sm:px-6 lg:grid-cols-2 lg:gap-16 lg:px-8">
-        {/* IMAGE FIRST ON MOBILE, RIGHT ON DESKTOP */}
+      <div className="relative z-[5] mx-auto grid w-full max-w-6xl grid-cols-1 items-center gap-10 px-6 lg:grid-cols-2 lg:gap-12">
         <motion.div
           initial={{ opacity: 0, y: 30, scale: 0.94 }}
           animate={{ opacity: 1, y: 0, scale: 1 }}
           transition={{ duration: 0.7, delay: 0.2 }}
           className="order-1 lg:order-2"
         >
-          <div className="relative mx-auto w-full max-w-sm sm:max-w-md lg:max-w-lg">
+          <div className="relative mx-auto w-full max-w-sm sm:max-w-md lg:max-w-115">
             <div className="absolute inset-0 rounded-[2rem] bg-primary/20 blur-xl" />
             <div className="absolute -inset-2 rounded-[2rem] opacity-100 dark:bg-[conic-gradient(from_0deg,rgba(255,140,66,0.38),transparent_35%,rgba(255,140,66,0.28),transparent_70%,rgba(255,140,66,0.38))] dark:blur-md" />
 
@@ -95,7 +94,7 @@ export default function Hero() {
             <motion.div
               animate={{ y: [-4, 6, -4] }}
               transition={{ duration: 3.5, repeat: Infinity, ease: 'easeInOut' }}
-              className="absolute -bottom-4 -right-3 rounded-2xl border border-primary/30 bg-card px-4 py-3 shadow-lg z-[6]"
+              className="absolute -bottom-4 -right-3 z-6 rounded-2xl border border-primary/30 bg-card px-4 py-3 shadow-lg"
             >
               <p className="text-sm font-extrabold text-primary">Developer</p>
               <p className="mt-1 text-xs text-muted-foreground">Davao City, Philippines</p>
@@ -103,7 +102,6 @@ export default function Hero() {
           </div>
         </motion.div>
 
-        {/* TEXT */}
         <div className="order-2 text-center lg:order-1 lg:text-left">
           <motion.p
             initial={{ opacity: 0, y: 18 }}
@@ -118,7 +116,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 22 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.65, delay: 0.26 }}
-            className="mb-5 text-4xl font-extrabold leading-tight tracking-tight text-foreground sm:text-5xl md:text-6xl xl:text-7xl"
+            className="mb-5 text-4xl font-extrabold leading-tight tracking-tight text-foreground sm:text-5xl md:text-6xl lg:text-[3.5rem] xl:text-[4rem]"
           >
             <span>John Mhel</span>
             <br />
@@ -132,7 +130,7 @@ export default function Hero() {
             className="mb-5 flex items-center justify-center gap-2 lg:justify-start"
           >
             <Code2 className="h-4 w-4 text-primary" />
-            <span className="min-h-[28px] text-base font-bold text-primary sm:text-lg">
+            <span className="min-h-7 text-base font-bold text-primary sm:text-lg">
               {displayedText}
               <motion.span
                 animate={{ opacity: [1, 0, 1] }}
@@ -147,9 +145,10 @@ export default function Hero() {
             initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.52 }}
-            className="mx-auto mb-8 max-w-xl text-sm leading-7 text-muted-foreground sm:text-base sm:leading-8 lg:mx-0"
+            className="mx-auto mb-8 max-w-[36rem] text-sm leading-7 text-muted-foreground sm:text-base sm:leading-8 lg:mx-0"
           >
-            Computer Science student and developer specializing in full-stack development, UI/UX design, and AI-driven solutions. I build modern, scalable web applications and thoughtful digital experiences that combine technology, design, and intelligent systems.          </motion.p>
+            Computer Science student and developer specializing in full-stack development, UI/UX design, and AI-driven solutions. I build modern, scalable web applications and thoughtful digital experiences that combine technology, design, and intelligent systems.
+          </motion.p>
 
           <motion.div
             initial={{ opacity: 0, y: 14 }}

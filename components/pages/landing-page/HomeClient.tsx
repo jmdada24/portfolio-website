@@ -6,7 +6,7 @@ import Navbar from '@/components/Navbar';
 import Hero from '@/components/pages/landing-page/Hero';
 import ProjectsPreview from '@/components/pages/landing-page/ProjectsPreview';
 import Contact from '@/components/pages/landing-page/Contact';
-import Footer from '@/components/pages/landing-page/Footer';
+import Footer from '@/components/Footer';
 import PageLoader from '@/components/pages/landing-page/PageLoader';
 
 export default function HomeClient() {

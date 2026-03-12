@@ -59,8 +59,8 @@ export default function Footer() {
       <div className="pointer-events-none absolute left-[8%] top-[12%] h-32 w-32 rounded-full bg-primary/12 blur-3xl dark:bg-primary/18" />
       <div className="pointer-events-none absolute right-[12%] bottom-[10%] h-40 w-40 rounded-full bg-primary/10 blur-3xl dark:bg-primary/16" />
 
-      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="mb-10 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 lg:gap-12">
+      <div className="relative mx-auto max-w-6xl px-6">
+        <div className="mb-10 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8">
           <div className="text-left">
             <h3 className="text-2xl font-extrabold tracking-tight text-primary dark:[text-shadow:0_0_18px_rgba(255,140,66,0.35)] md:text-3xl lg:text-4xl">
               JMD
@@ -70,7 +70,7 @@ export default function Footer() {
             </p>
           </div>
 
-          <div className="text-left">
+          <div className="text-left lg:justify-self-center lg:pl-6 xl:pl-12">
             <h4 className="mb-4 text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground md:text-sm">
               Quick Links
             </h4>
@@ -112,7 +112,7 @@ export default function Footer() {
               Connect
             </h4>
 
-            <div className="flex justify-start gap-3 md:gap-4">
+            <div className="flex flex-wrap justify-start gap-3 md:gap-4">
               {socialLinks.map((social) => {
                 const Icon = social.icon;
 

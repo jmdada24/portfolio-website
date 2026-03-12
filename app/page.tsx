@@ -2,7 +2,7 @@ import Navbar from '@/components/Navbar';
 import Hero from '@/components/pages/landing-page/Hero';
 import ProjectsPreview from '@/components/pages/landing-page/ProjectsPreview';
 import Contact from '@/components/pages/landing-page/Contact';
-import Footer from '@/components/pages/landing-page/Footer';
+import Footer from '@/components/Footer';
 import HomeClient from '@/components/pages/landing-page/HomeClient';
 
 export default function Home() {

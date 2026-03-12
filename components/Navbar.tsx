@@ -102,13 +102,13 @@ export default function Navbar() {
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.55, ease: 'easeOut' }}
       className={[
-        'fixed inset-x-0 top-0 z-[100] h-16 transition-all duration-300',
+        'fixed inset-x-0 top-0 z-100 h-16 transition-all duration-300',
         scrolled || pathname !== '/'
           ? 'border-b border-border bg-background/80 backdrop-blur-xl'
           : 'border-transparent bg-transparent',
       ].join(' ')}
     >
-      <div className="mx-auto flex h-full max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto flex h-full max-w-6xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <button
           onClick={() => scrollToSection('home')}
           className="text-primary text-xl font-extrabold tracking-tight transition-transform hover:scale-[1.04] sm:text-2xl"
