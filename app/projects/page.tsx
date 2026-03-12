@@ -4,7 +4,13 @@ import SineSkwelahan from "./sineskwelahan/page";
 import BarangayBayabas from "./barangaybayabas/page";
 
 
-export default function Page(){
+export const metadata = {
+  title: "Projects | John Mhel Dalumpines",
+  description:
+    "Explore projects by John Mhel Dalumpines including full-stack web applications, UI/UX designs, and AI-powered systems.",
+};
+
+export default function ProjectPage(){
 
     return(
         <>
