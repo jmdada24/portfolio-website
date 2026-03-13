@@ -128,7 +128,7 @@ export const projects: Project[] = [
     outcome:
       "The project helped strengthen my practical experience in full-stack development while applying user-centered design thinking to a more meaningful problem space.",
   },
-  
+
   {
     slug: "technical-writing-enhancer",
     name: "Technical Writing Enhancement Agent",
@@ -141,7 +141,7 @@ export const projects: Project[] = [
     yearNumber: 2026,
     month: "March",
     monthShort: "Mar",
-    sortDate: "2025-08",
+    sortDate: "2026-08",
     technologies: [
       "Python",
       "Streamlit",
@@ -161,4 +161,43 @@ export const projects: Project[] = [
     outcome:
       "The project demonstrated practical NLP system design, local LLM integration, prompt-based reasoning, and privacy-friendly technical writing enhancement through a usable Streamlit interface.",
   },
+
+  {
+    slug: "student-course-enrollment-system",
+    name: "Student Course Enrollment System",
+    shortDescription:
+      "A full-stack web-based enrollment platform for senior high school workflows with role-based access for admins, students, and teachers.",
+    fullDescription:
+      "The Student Course Enrollment System is a web-based academic portal built for senior high school enrollment workflows under the Sine Skwelahan branding. It supports student registration with OTP verification, admin approval processes, course and schedule management, enrollment handling, and grade viewing through dedicated dashboards for admins, students, and teachers.",
+    category: "Full Stack",
+    year: "September 2025",
+    yearNumber: 2025,
+    month: "September",
+    monthShort: "Sep",
+    sortDate: "2025-09",
+    technologies: [
+      "PHP",
+      "MySQL",
+      "MariaDB",
+      "Tailwind CSS 4",
+      "DaisyUI 5",
+      "JavaScript",
+      "PHPMailer",
+      "PDO",
+      "Composer",
+      "npm",
+    ],
+    demo: "",
+    github: "#",
+    coverImage: "",
+    coverAlt: "Student Course Enrollment System project preview",
+    problem:
+      "Managing student registration, enrollment approval, course scheduling, and grade access manually can be slow, repetitive, and difficult to track for both students and school administrators.",
+    solution:
+      "Built a role-based web application with PHP, MySQL, Tailwind CSS, DaisyUI, and vanilla JavaScript that supports OTP-based student registration, admin approval workflows, course and schedule management, enrollment processing, and grade-related access for students and teachers.",
+    outcome:
+      "The project strengthened my full-stack development skills in building server-rendered systems, designing role-based academic workflows, handling session-based authentication, integrating email verification, and structuring both frontend and backend modules for a real school portal scenario.",
+  },
+
+
 ];
