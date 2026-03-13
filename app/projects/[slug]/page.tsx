@@ -105,7 +105,6 @@ export default async function ProjectStoryPage({ params }: Props) {
                   ))}
                 </div>
               </div>
-
               <div className="mt-6 flex flex-wrap gap-3">
                 {project.demo && (
                   <a
@@ -118,14 +117,25 @@ export default async function ProjectStoryPage({ params }: Props) {
                   </a>
                 )}
 
-                {project.github && (
+                {project.github && project.github !== "#" && (
                   <a
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex rounded-xl border border-primary/25 bg-primary/10 px-4 py-2 text-sm font-medium text-primary hover:bg-primary/15"
+                    className="inline-flex rounded-xl border border-border bg-background px-4 py-2 text-sm font-medium text-foreground hover:bg-accent"
                   >
                     GitHub
+                  </a>
+                )}
+
+                {project.figma && (
+                  <a
+                    href={project.figma}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex rounded-xl border border-border bg-background px-4 py-2 text-sm font-medium text-foreground hover:bg-accent"
+                  >
+                    Figma
                   </a>
                 )}
               </div>

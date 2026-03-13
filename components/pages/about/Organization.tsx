@@ -3,30 +3,7 @@
 import { motion } from "framer-motion";
 import { Users, CalendarDays } from "lucide-react";
 import SectionGrid from "@/components/ui/SectionGrid";
-
-const organizations = [
-  {
-    name: "Google Developer Student Clubs",
-    role: "Member / Volunteer",
-    period: "2023 — Present",
-    description:
-      "Participated in student-led technology initiatives, community events, and collaborative learning opportunities focused on development, innovation, and practical technical growth.",
-  },
-  {
-    name: "University / Department Student Organization",
-    role: "Member",
-    period: "2022 — Present",
-    description:
-      "Engaged in academic and student-centered activities that support leadership, collaboration, and involvement within the Computer Science community.",
-  },
-  {
-    name: "Community Volunteer Initiatives",
-    role: "Volunteer",
-    period: "Ongoing",
-    description:
-      "Contributed time and effort to community-oriented and student-centered initiatives, supporting teamwork, communication, and service-driven involvement.",
-  },
-];
+import { organizations } from "@/lib/organization";
 
 export default function Organization() {
   return (

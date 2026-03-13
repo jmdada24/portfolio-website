@@ -30,6 +30,8 @@ export type Project = {
   technologies: string[];
   demo?: string;
   github?: string;
+  figma?: string;
+
   coverImage?: string;
   coverAlt?: string;
 
@@ -67,7 +69,7 @@ export const projects: Project[] = [
       "Vercel",
     ],
     demo: "https://bb-barangay-appointment-system-project.vercel.app/",
-    github: "#",
+    github: "https://github.com/jmdada24/barangay-appointment-system",
     coverImage: "",
     coverAlt: "Barangay Bayabas Appointment System project preview",
     problem:
@@ -93,7 +95,7 @@ export const projects: Project[] = [
     sortDate: "2025-07",
     technologies: ["React", "Node.js", "TypeScript", "TailwindCSS", "Firebase"],
     demo: "https://um-realitech-hackestate-1ed69.web.app/",
-    github: "#",
+    github: "https://github.com/jmdada24",
     coverImage: "",
     coverAlt: "Realitech project preview",
     problem:
@@ -118,7 +120,7 @@ export const projects: Project[] = [
     sortDate: "2025-01",
     technologies: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
     demo: "https://mindspace.infinityfreeapp.com/?i=1",
-    github: "#",
+    github: "https://github.com/jmdada24/Mental_Health_Support_Site",
     coverImage: "",
     coverAlt: "MindSpace project preview",
     problem:
@@ -128,6 +130,7 @@ export const projects: Project[] = [
     outcome:
       "The project helped strengthen my practical experience in full-stack development while applying user-centered design thinking to a more meaningful problem space.",
   },
+
 
   {
     slug: "technical-writing-enhancer",
@@ -151,7 +154,7 @@ export const projects: Project[] = [
       "Prompt Engineering",
     ],
     demo: "https://technical-writing-enhancer-nlp-project.streamlit.app/",
-    github: "#",
+    github: "https://github.com/jmdada24/technical-writing-enhancer",
     coverImage: "",
     coverAlt: "Technical Writing Enhancement Agent preview",
     problem:
@@ -160,6 +163,38 @@ export const projects: Project[] = [
       "Developed a two-stage agentic NLP pipeline that first analyzes whether text needs enhancement, then selectively applies only the relevant 6C principles for minimal and conservative rewriting.",
     outcome:
       "The project demonstrated practical NLP system design, local LLM integration, prompt-based reasoning, and privacy-friendly technical writing enhancement through a usable Streamlit interface.",
+  },
+
+  {
+    slug: "gyum",
+    name: "GyUM — University Fitness Tracker Proposal",
+    shortDescription:
+      "A Figma-based product design proposal for a university fitness tracker that suggests workout schedules, tracks progress, and connects students through a campus wellness community.",
+    fullDescription:
+      "GyUM is a product design concept created in Figma that explores how a university-focused fitness platform could help students and faculty maintain healthy routines despite busy academic schedules. The app introduces smart workout scheduling based on class timetables, progress tracking features, and a campus community where users can share achievements and join fitness groups for motivation.",
+    category: "Design",
+    year: "December 2025",
+    yearNumber: 2025,
+    month: "December",
+    monthShort: "Dec",
+    sortDate: "2025-12",
+    technologies: [
+      "Figma",
+      "UI Design",
+      "UX Design",
+      "Product Design",
+      "Wireframing",
+      "Prototyping",
+    ],
+    figma: "https://www.figma.com/design/Ml6hOzI7hiIUuPN612et4c/GyUM-Project?t=hrrF0Ab48SvicI8B-1", 
+    coverImage: "",
+    coverAlt: "GyUM university fitness tracker design preview",
+    problem:
+      "University students and faculty often struggle to maintain consistent fitness routines because academic schedules are unpredictable and time is limited.",
+    solution:
+      "Designed a concept fitness application that integrates with a university schedule system to suggest optimal workout times based on free periods, while also allowing users to track progress and stay motivated through a campus-based fitness community.",
+    outcome:
+      "The project demonstrates product thinking and UI/UX design skills through feature planning, user-centered design decisions, and interface prototyping using Figma.",
   },
 
   {
@@ -188,7 +223,7 @@ export const projects: Project[] = [
       "npm",
     ],
     demo: "",
-    github: "#",
+    github: "https://github.com/jmdada24/Student_Course_Enrollment",
     coverImage: "",
     coverAlt: "Student Course Enrollment System project preview",
     problem:

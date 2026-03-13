@@ -114,7 +114,7 @@ export default function ProjectsPreview() {
                     )}
                   </div>
 
-                  <div className="mt-auto border-t border-border pt-4">
+                  <div className="mt-auto border-t border-border pt-4 flex justify-end">
                     <span className="text-xs font-semibold text-primary">
                       View in Projects →
                     </span>
