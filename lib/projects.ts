@@ -186,7 +186,7 @@ export const projects: Project[] = [
       "Wireframing",
       "Prototyping",
     ],
-    figma: "https://www.figma.com/design/Ml6hOzI7hiIUuPN612et4c/GyUM-Project?t=hrrF0Ab48SvicI8B-1", 
+    figma: "https://www.figma.com/design/Ml6hOzI7hiIUuPN612et4c/GyUM-Project?t=hrrF0Ab48SvicI8B-1",
     coverImage: "",
     coverAlt: "GyUM university fitness tracker design preview",
     problem:
@@ -234,5 +234,43 @@ export const projects: Project[] = [
       "The project strengthened my full-stack development skills in building server-rendered systems, designing role-based academic workflows, handling session-based authentication, integrating email verification, and structuring both frontend and backend modules for a real school portal scenario.",
   },
 
+  {
+    slug: "file-converter-app",
+    name: "File Converter App",
+    shortDescription:
+      "A privacy-focused file converter built with Laravel, Docker, and Python for converting files locally with temporary processing and automatic cleanup.",
+    fullDescription:
+      "File Converter App is a private file conversion web application built as a side project to provide a simpler and more trustworthy alternative to sketchy online converter websites. It currently supports Image to PDF, PDF to Image, and PDF to Word conversion using Laravel for the web application layer, Docker for containerized development and deployment, and Python for higher-fidelity PDF to DOCX conversion.",
+    category: "Full Stack",
+    featured: true,
+    year: "March 2026",
+    yearNumber: 2026,
+    month: "March",
+    monthShort: "Mar",
+    sortDate: "2026-03",
+    technologies: [
+      "Laravel 12",
+      "PHP",
+      "Blade",
+      "Tailwind CSS",
+      "Vite",
+      "Docker",
+      "Docker Compose",
+      "Python",
+      "pdf2docx",
+      "ImageMagick",
+      "Ghostscript",
+    ],
+    demo: "https://file-converter-app-jb04.onrender.com/",
+    github: "https://github.com/jmdada24/file-converter-app",
+    coverImage: "",
+    coverAlt: "File Converter App project preview",
+    problem:
+      "Many free online file converter websites feel untrustworthy, especially when users upload personal, academic, or work-related files without knowing how those files are handled or stored.",
+    solution:
+      "Built a privacy-friendly converter app that processes files temporarily, supports multiple conversion tools through a clean Laravel service-based structure, and uses Docker plus Python integration to support both PHP-based and script-based file conversion workflows.",
+    outcome:
+      "The project strengthened my skills in Laravel architecture, Docker-based development, backend file handling, temporary file cleanup, production deployment, and integrating Python scripts into a PHP application for real-world conversion tasks.",
+  },
 
 ];
