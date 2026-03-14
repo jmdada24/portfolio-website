@@ -17,6 +17,7 @@ export const certificates: CertificateItem[] = [
     issuer: "Certiport",
     issuedOn: "2025",
     year: 2025,
+    image:"/assets/images/certificates/itsdatabase.png",
     imageAlt: "ITS Certiport Database certificate preview",
     href: "/assets/files/itsdatabase.pdf",
   },
@@ -24,9 +25,11 @@ export const certificates: CertificateItem[] = [
     slug: "its-certiport-java",
     name: "ITS Certiport Java",
     issuer: "Certiport",
-    issuedOn: "2025",
-    year: 2025,
+    issuedOn: "2024",
+    year: 2024,
+    image:"/assets/images/certificates/itsjava.png",
     imageAlt: "ITS Certiport Java certificate preview",
     href: "/assets/files/itsjava.pdf",
   },
+
 ];
