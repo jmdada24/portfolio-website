@@ -42,6 +42,45 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    slug: "contnental-fitness-gym-management",
+    name: "Contnental Fitness Gym Management System",
+    shortDescription:
+      "A full-stack multi-branch gym management platform for members, bookings, class schedules, QR attendance, online subscriptions, staff, trainers, and admin operations.",
+    fullDescription:
+      "The Contnental Fitness Gym Management System is a full-stack operational platform built for an exclusive fitness gym that needed a more centralized way to manage members across branches. The system replaces spreadsheet-heavy workflows with a role-based Laravel API and Next.js portal for admins, staff, trainers, and members, supporting member subscriptions, QR attendance, class enrollment, bookings, schedules, payments, announcements, archives, and activity logs.",
+    category: "Full Stack",
+    featured: true,
+    year: "May 2026",
+    yearNumber: 2026,
+    month: "May",
+    monthShort: "May",
+    sortDate: "2026-05",
+    technologies: [
+      "Laravel 13",
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "shadcn/ui",
+      "Supabase",
+      "PostgreSQL",
+      "Xendit",
+      "Docker",
+      "Render",
+      "Vercel",
+      "Clean Architecture",
+    ],
+    demo: "https://contnental-fitness-gym.vercel.app/",
+    github: "https://github.com/jmdada24/contnental-fitness-gym",
+    coverImage: "/assets/images/projects/contnental-fitness-gym-project.png",
+    coverAlt: "Contnental Fitness Gym Management System project preview",
+    problem:
+      "Contnental Fitness Gym managed important member and branch operations through spreadsheets, making it difficult to centralize records, track attendance, coordinate trainers and staff, manage schedules, and monitor activity across multiple branches.",
+    solution:
+      "Built a role-based full-stack gym management system with a Laravel API and Next.js portal. Members can subscribe online through Xendit, view their QR code, and enroll in classes; trainers can see their assigned schedules; staff can handle limited operational tasks; and admins can manage members, bookings, class schedules, trainers, staff, announcements, payments, archives, and user logs.",
+    outcome:
+      "The project demonstrates practical full-stack system design for real gym operations, including multi-role access, centralized branch management, QR-based attendance, online payment workflows, secure activity tracking, clean architecture, Docker-based deployment, and a production path using Render, Vercel, and Supabase PostgreSQL.",
+  },
+  {
     slug: "barangaybayabas",
     name: "Barangay Bayabas Appointment System",
     shortDescription:
