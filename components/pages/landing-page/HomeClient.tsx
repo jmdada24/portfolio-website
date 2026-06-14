@@ -21,28 +21,30 @@ export default function HomeClient() {
     const navType = navigationEntry?.type;
     const alreadyShownOnThisTab = sessionStorage.getItem(HOME_ENTRY_KEY) === 'true';
 
-    let shouldShowLoader = false;
-
-    if (navType === 'reload') {
-      shouldShowLoader = true;
-    } else if (navType === 'navigate' && !alreadyShownOnThisTab) {
-      shouldShowLoader = true;
-    }
+    const shouldShowLoader =
+      navType === 'reload' || (navType === 'navigate' && !alreadyShownOnThisTab);
 
     if (!shouldShowLoader) {
-      setLoading(false);
       return;
     }
 
-    sessionStorage.setItem(HOME_ENTRY_KEY, 'true');
-    setLoading(true);
+    const startTimer = window.setTimeout(() => {
+      sessionStorage.setItem(HOME_ENTRY_KEY, 'true');
+      setLoading(true);
+    }, 0);
+
+    return () => window.clearTimeout(startTimer);
+  }, []);
+
+  useEffect(() => {
+    if (!loading) return;
 
     const timer = window.setTimeout(() => {
       setLoading(false);
     }, 1400);
 
     return () => window.clearTimeout(timer);
-  }, []);
+  }, [loading]);
 
   return (
     <>

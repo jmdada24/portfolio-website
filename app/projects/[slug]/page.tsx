@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import ProjectImagePreview from "@/components/pages/projects/ProjectImagePreview";
 import { projects } from "@/lib/projects";
 
 type Props = {
@@ -54,6 +55,21 @@ export default async function ProjectStoryPage({ params }: Props) {
             </div>
           </div>
         </section>
+
+        {project.coverImage && (
+          <section className="pb-12">
+            <div className="mx-auto max-w-6xl px-6">
+              <ProjectImagePreview
+                image={project.coverImage}
+                alt={project.coverAlt || `${project.name} preview`}
+                title={project.name}
+                className="relative aspect-[16/9] overflow-hidden rounded-3xl border border-border bg-primary/10 shadow-sm"
+                imageClassName="object-cover transition duration-500 group-hover:scale-[1.02]"
+                sizes="(max-width: 768px) 100vw, 1100px"
+              />
+            </div>
+          </section>
+        )}
 
         <section className="pb-20">
           <div className="mx-auto grid max-w-6xl gap-8 px-6 lg:grid-cols-[1.2fr_0.8fr]">

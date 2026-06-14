@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     siteName: "JMD Portfolio",
     images: [
       {
-        url: "/assets/images/jm-image.jpeg",
+        url: "/assets/images/jm-image.png",
         width: 1200,
         height: 630,
         alt: "John Mhel Dalumpines - Full-Stack Developer, UI/UX Designer, and AI Engineer",
@@ -68,7 +68,7 @@ export const metadata: Metadata = {
     title: "John Mhel Dalumpines | Full-Stack Developer, UI/UX Designer & AI Engineer",
     description:
       "Portfolio of John Mhel Dalumpines — Full-Stack Developer, UI/UX Designer, and AI Engineer.",
-    images: ["/assets/images/jm-image.jpeg"],
+    images: ["/assets/images/jm-image.png"],
   },
   robots: {
     index: true,

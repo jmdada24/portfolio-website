@@ -22,7 +22,7 @@ export default function AboutMe() {
               <div className="absolute inset-0 bg-gradient-to-br from-primary/10 via-transparent to-transparent" />
               <div className="relative aspect-[4/5]">
                 <Image
-                  src="/assets/images/jm-image.jpeg"
+                  src="/assets/images/jm-image.png"
                   alt="John Mhel Dalumpines"
                   fill
                   priority

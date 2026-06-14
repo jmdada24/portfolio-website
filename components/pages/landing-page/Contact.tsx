@@ -1,5 +1,6 @@
 'use client';
 
+import emailjs from '@emailjs/browser';
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 import {
@@ -23,7 +24,10 @@ export default function Contact() {
     message: '',
   });
 
-  const [sent, setSent] = useState(false);
+  const [status, setStatus] = useState<'idle' | 'sending' | 'success' | 'error'>(
+    'idle'
+  );
+  const [statusMessage, setStatusMessage] = useState('');
 
   const contactInfo = [
     {
@@ -58,24 +62,56 @@ export default function Contact() {
     },
   ];
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    const subject = encodeURIComponent(`Portfolio Inquiry from ${formData.name}`);
-    const body = encodeURIComponent(
-      `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
-    );
+    const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+    const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
+    const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
 
-    window.location.href = `mailto:jmdalumpines24@gmail.com?subject=${subject}&body=${body}`;
+    if (!serviceId || !templateId || !publicKey) {
+      setStatus('error');
+      setStatusMessage(
+        'Email service is not configured yet. Please use the email link for now.'
+      );
+      return;
+    }
 
-    setSent(true);
-    setFormData({
-      name: '',
-      email: '',
-      message: '',
-    });
+    try {
+      setStatus('sending');
+      setStatusMessage('');
 
-    setTimeout(() => setSent(false), 3000);
+      await emailjs.send(
+        serviceId,
+        templateId,
+        {
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+        },
+        {
+          publicKey,
+        }
+      );
+
+      setStatus('success');
+      setStatusMessage('Message sent successfully. Thank you for reaching out.');
+      setFormData({
+        name: '',
+        email: '',
+        message: '',
+      });
+
+      window.setTimeout(() => {
+        setStatus('idle');
+        setStatusMessage('');
+      }, 4000);
+    } catch {
+      setStatus('error');
+      setStatusMessage(
+        'Something went wrong while sending. Please try again or use the email link.'
+      );
+    }
   };
 
   return (
@@ -221,12 +257,18 @@ export default function Contact() {
 
               <Button
                 type="submit"
+                disabled={status === 'sending'}
                 className="h-11 w-full rounded-xl bg-primary text-primary-foreground hover:bg-primary/90"
               >
-                {sent ? (
+                {status === 'success' ? (
                   <span className="flex items-center gap-2">
                     <CheckCircle2 className="h-4 w-4" />
-                    Message Ready
+                    Message Sent
+                  </span>
+                ) : status === 'sending' ? (
+                  <span className="flex items-center gap-2">
+                    <Send className="h-4 w-4" />
+                    Sending...
                   </span>
                 ) : (
                   <span className="flex items-center gap-2">
@@ -235,6 +277,18 @@ export default function Contact() {
                   </span>
                 )}
               </Button>
+
+              {statusMessage && (
+                <p
+                  className={[
+                    'text-sm leading-6',
+                    status === 'error' ? 'text-destructive' : 'text-muted-foreground',
+                  ].join(' ')}
+                  role="status"
+                >
+                  {statusMessage}
+                </p>
+              )}
             </form>
           </motion.div>
         </div>

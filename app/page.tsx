@@ -6,7 +6,7 @@ export default function Home() {
     '@type': 'Person',
     name: 'John Mhel Dalumpines',
     url: 'https://jm-dalumpines.vercel.app',
-    image: 'https://jm-dalumpines.vercel.app/assets/images/jm-image.jpeg',
+    image: 'https://jm-dalumpines.vercel.app/assets/images/jm-image.png',
     sameAs: [
       'https://github.com/jmdada24',
       'https://www.linkedin.com/in/john-mhel-dalumpines-3853412a5/',

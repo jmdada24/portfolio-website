@@ -10,7 +10,7 @@ const navLinks = [
   { name: 'Home', type: 'section', section: 'home', href: '/' },
   { name: 'About', type: 'page', href: '/about' },
   { name: 'Projects', type: 'page', href: '/projects' },
-  { name: 'Contact', type: 'section', section: 'contact', href: '/#contact' },
+  { name: 'Contact', type: 'page', href: '/contact' },
 ] as const;
 
 export default function Navbar() {
@@ -18,18 +18,9 @@ export default function Navbar() {
   const router = useRouter();
 
   const [isOpen, setIsOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState<'home' | 'contact'>('home');
+  const [activeSection, setActiveSection] = useState<'home'>('home');
   const [scrolled, setScrolled] = useState(false);
-  const [mounted, setMounted] = useState(false);
   const [isDark, setIsDark] = useState(true);
-
-  useEffect(() => {
-    setMounted(true);
-
-    const root = document.documentElement;
-    const darkMode = root.classList.contains('dark');
-    setIsDark(darkMode);
-  }, []);
 
   useEffect(() => {
     if (pathname !== '/') return;
@@ -37,7 +28,7 @@ export default function Navbar() {
     const handleScroll = () => {
       setScrolled(window.scrollY > 28);
 
-      const sections = ['home', 'contact'] as const;
+      const sections = ['home'] as const;
       const scrollPosition = window.scrollY + 120;
 
       for (const section of sections) {
@@ -60,17 +51,11 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [pathname]);
 
-  useEffect(() => {
-    if (pathname !== '/') {
-      setScrolled(true);
-    }
-  }, [pathname]);
-
-  const scrollToSection = (sectionId: 'home' | 'contact') => {
+  const scrollToSection = (sectionId: 'home') => {
     setIsOpen(false);
 
     if (pathname !== '/') {
-      router.push(sectionId === 'home' ? '/' : `/#${sectionId}`);
+      router.push('/');
       return;
     }
 
@@ -165,50 +150,46 @@ export default function Navbar() {
             );
           })}
 
-          {mounted && (
-            <button
-              onClick={toggleTheme}
-              className="flex h-10 w-10 items-center justify-center rounded-xl border border-border bg-secondary text-primary transition-transform hover:scale-105 active:scale-95"
-              aria-label="Toggle theme"
-            >
-              <AnimatePresence mode="wait" initial={false}>
-                {isDark ? (
-                  <motion.span
-                    key="sun"
-                    initial={{ rotate: -90, opacity: 0, scale: 0.6 }}
-                    animate={{ rotate: 0, opacity: 1, scale: 1 }}
-                    exit={{ rotate: 90, opacity: 0, scale: 0.6 }}
-                    transition={{ duration: 0.2 }}
-                  >
-                    <Sun className="h-4 w-4" />
-                  </motion.span>
-                ) : (
-                  <motion.span
-                    key="moon"
-                    initial={{ rotate: 90, opacity: 0, scale: 0.6 }}
-                    animate={{ rotate: 0, opacity: 1, scale: 1 }}
-                    exit={{ rotate: -90, opacity: 0, scale: 0.6 }}
-                    transition={{ duration: 0.2 }}
-                  >
-                    <Moon className="h-4 w-4" />
-                  </motion.span>
-                )}
-              </AnimatePresence>
-            </button>
-          )}
+          <button
+            onClick={toggleTheme}
+            className="flex h-10 w-10 items-center justify-center rounded-xl border border-border bg-secondary text-primary transition-transform hover:scale-105 active:scale-95"
+            aria-label="Toggle theme"
+          >
+            <AnimatePresence mode="wait" initial={false}>
+              {isDark ? (
+                <motion.span
+                  key="sun"
+                  initial={{ rotate: -90, opacity: 0, scale: 0.6 }}
+                  animate={{ rotate: 0, opacity: 1, scale: 1 }}
+                  exit={{ rotate: 90, opacity: 0, scale: 0.6 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <Sun className="h-4 w-4" />
+                </motion.span>
+              ) : (
+                <motion.span
+                  key="moon"
+                  initial={{ rotate: 90, opacity: 0, scale: 0.6 }}
+                  animate={{ rotate: 0, opacity: 1, scale: 1 }}
+                  exit={{ rotate: -90, opacity: 0, scale: 0.6 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <Moon className="h-4 w-4" />
+                </motion.span>
+              )}
+            </AnimatePresence>
+          </button>
         </div>
 
         {/* Mobile Controls */}
         <div className="flex items-center gap-2 md:hidden">
-          {mounted && (
-            <button
-              onClick={toggleTheme}
-              className="flex h-9 w-9 items-center justify-center rounded-xl border border-border bg-secondary text-primary"
-              aria-label="Toggle theme"
-            >
-              {isDark ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
-            </button>
-          )}
+          <button
+            onClick={toggleTheme}
+            className="flex h-9 w-9 items-center justify-center rounded-xl border border-border bg-secondary text-primary"
+            aria-label="Toggle theme"
+          >
+            {isDark ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
+          </button>
 
           <button
             onClick={() => setIsOpen((prev) => !prev)}

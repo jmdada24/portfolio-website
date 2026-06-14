@@ -83,7 +83,7 @@ export default function Hero() {
 
             <div className="relative aspect-[4/4.8] overflow-hidden rounded-[1.75rem] border border-primary/30 bg-card shadow-2xl">
               <Image
-                src="/assets/images/jm-image.jpeg"
+                src="/assets/images/jm-image.png"
                 alt="John Mhel Dalumpines"
                 fill
                 priority

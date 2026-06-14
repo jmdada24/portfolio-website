@@ -70,7 +70,7 @@ export const projects: Project[] = [
     ],
     demo: "https://bb-barangay-appointment-system-project.vercel.app/",
     github: "https://github.com/jmdada24/barangay-appointment-system",
-    coverImage: "",
+    coverImage: "/assets/images/projects/barangay-project.png",
     coverAlt: "Barangay Bayabas Appointment System project preview",
     problem:
       "Manual barangay appointment handling and document requests can be inefficient, time-consuming, and dependent on in-person visits, which creates inconvenience for both residents and staff.",
@@ -96,7 +96,7 @@ export const projects: Project[] = [
     technologies: ["React", "Node.js", "TypeScript", "TailwindCSS", "Firebase"],
     demo: "https://um-realitech-hackestate-1ed69.web.app/",
     github: "https://github.com/jmdada24",
-    coverImage: "",
+    coverImage: "/assets/images/projects/realitech-project.png",
     coverAlt: "Realitech project preview",
     problem:
       "Property listings and communication between stakeholders often lack transparency and consistency.",
@@ -121,7 +121,7 @@ export const projects: Project[] = [
     technologies: ["HTML", "CSS", "JavaScript", "PHP", "MySQL"],
     demo: "https://mindspace.infinityfreeapp.com/?i=1",
     github: "https://github.com/jmdada24/Mental_Health_Support_Site",
-    coverImage: "",
+    coverImage: "/assets/images/projects/mindspace-project.png",
     coverAlt: "MindSpace project preview",
     problem:
       "Many mental wellness platforms can feel cluttered, inconsistent, or difficult to use for people who need a calmer and more intuitive experience.",
@@ -155,7 +155,7 @@ export const projects: Project[] = [
     ],
     demo: "https://technical-writing-enhancer-nlp-project.streamlit.app/",
     github: "https://github.com/jmdada24/technical-writing-enhancer",
-    coverImage: "",
+    coverImage: "/assets/images/projects/technical-writing-enhancer.png",
     coverAlt: "Technical Writing Enhancement Agent preview",
     problem:
       "Technical writing can be unclear, incomplete, inconsistent, or overly verbose, and manual revision can be time-consuming and subjective.",
@@ -187,7 +187,7 @@ export const projects: Project[] = [
       "Prototyping",
     ],
     figma: "https://www.figma.com/design/Ml6hOzI7hiIUuPN612et4c/GyUM-Project?t=hrrF0Ab48SvicI8B-1",
-    coverImage: "",
+    coverImage: "/assets/images/projects/gyUM-design.png",
     coverAlt: "GyUM university fitness tracker design preview",
     problem:
       "University students and faculty often struggle to maintain consistent fitness routines because academic schedules are unpredictable and time is limited.",
@@ -263,7 +263,7 @@ export const projects: Project[] = [
     ],
     demo: "https://file-converter-app-jb04.onrender.com/",
     github: "https://github.com/jmdada24/file-converter-app",
-    coverImage: "",
+    coverImage: "/assets/images/projects/private-file-converter.png",
     coverAlt: "File Converter App project preview",
     problem:
       "Many free online file converter websites feel untrustworthy, especially when users upload personal, academic, or work-related files without knowing how those files are handled or stored.",
