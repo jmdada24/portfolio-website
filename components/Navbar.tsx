@@ -18,7 +18,6 @@ export default function Navbar() {
   const router = useRouter();
 
   const [isOpen, setIsOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState<'home'>('home');
   const [scrolled, setScrolled] = useState(false);
   const [isDark, setIsDark] = useState(true);
 
@@ -27,23 +26,6 @@ export default function Navbar() {
 
     const handleScroll = () => {
       setScrolled(window.scrollY > 28);
-
-      const sections = ['home'] as const;
-      const scrollPosition = window.scrollY + 120;
-
-      for (const section of sections) {
-        const el = document.getElementById(section);
-        if (!el) continue;
-
-        const { offsetTop, offsetHeight } = el;
-        if (
-          scrollPosition >= offsetTop &&
-          scrollPosition < offsetTop + offsetHeight
-        ) {
-          setActiveSection(section);
-          break;
-        }
-      }
     };
 
     handleScroll();
@@ -81,6 +63,15 @@ export default function Navbar() {
 
   const isPageActive = (href: string) => pathname === href;
 
+  const getNavItemClassName = (isActive: boolean) =>
+    [
+      'relative py-2 text-sm font-medium transition-colors',
+      'after:absolute after:left-0 after:right-0 after:bottom-0 after:h-0.5 after:rounded-full after:bg-primary after:transition-opacity after:duration-200',
+      isActive
+        ? 'text-primary after:opacity-100'
+        : 'text-muted-foreground hover:text-primary after:opacity-0',
+    ].join(' ');
+
   return (
     <motion.nav
       initial={{ y: -70, opacity: 0 }}
@@ -108,7 +99,7 @@ export default function Navbar() {
             let isActive = false;
 
             if (link.type === 'section') {
-              isActive = pathname === '/' && activeSection === link.section;
+              isActive = pathname === '/';
             } else {
               isActive = isPageActive(link.href);
             }
@@ -118,16 +109,9 @@ export default function Navbar() {
                 <button
                   key={link.name}
                   onClick={() => scrollToSection(link.section)}
-                  className="relative py-2 text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
+                  className={getNavItemClassName(isActive)}
                 >
-                  <span className={isActive ? 'text-primary' : ''}>{link.name}</span>
-                  {isActive && (
-                    <motion.div
-                      layoutId="nav-underline"
-                      className="absolute bottom-0 left-0 right-0 h-0.5 rounded-full bg-primary"
-                      transition={{ type: 'spring', stiffness: 380, damping: 30 }}
-                    />
-                  )}
+                  {link.name}
                 </button>
               );
             }
@@ -136,16 +120,9 @@ export default function Navbar() {
               <Link
                 key={link.name}
                 href={link.href}
-                className="relative py-2 text-sm font-medium text-muted-foreground transition-colors hover:text-primary"
+                className={getNavItemClassName(isActive)}
               >
-                <span className={isActive ? 'text-primary' : ''}>{link.name}</span>
-                {isActive && (
-                  <motion.div
-                    layoutId="nav-underline"
-                    className="absolute bottom-0 left-0 right-0 h-0.5 rounded-full bg-primary"
-                    transition={{ type: 'spring', stiffness: 380, damping: 30 }}
-                  />
-                )}
+                {link.name}
               </Link>
             );
           })}
@@ -215,7 +192,7 @@ export default function Navbar() {
                 let isActive = false;
 
                 if (link.type === 'section') {
-                  isActive = pathname === '/' && activeSection === link.section;
+                  isActive = pathname === '/';
                 } else {
                   isActive = isPageActive(link.href);
                 }
