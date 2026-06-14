@@ -110,8 +110,7 @@ export default function Contact() {
         setStatus('idle');
         setStatusMessage('');
       }, 4000);
-    } catch (error) {
-      console.error('EmailJS send failed:', error);
+    } catch {
       setStatus('error');
       setStatusMessage(
         'Something went wrong while sending. Please try again or use the email link.'
