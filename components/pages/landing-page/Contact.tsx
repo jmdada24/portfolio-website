@@ -88,6 +88,10 @@ export default function Contact() {
           name: formData.name,
           email: formData.email,
           message: formData.message,
+          from_name: formData.name,
+          from_email: formData.email,
+          reply_to: formData.email,
+          to_email: 'jmdalumpines24@gmail.com',
         },
         {
           publicKey,
@@ -106,7 +110,8 @@ export default function Contact() {
         setStatus('idle');
         setStatusMessage('');
       }, 4000);
-    } catch {
+    } catch (error) {
+      console.error('EmailJS send failed:', error);
       setStatus('error');
       setStatusMessage(
         'Something went wrong while sending. Please try again or use the email link.'
