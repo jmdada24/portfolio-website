@@ -119,6 +119,34 @@ export const projects: Project[] = [
       "The project demonstrated practical full-stack and mobile development skills across authentication, role-based access, AI integration, real-time workflows, email handling, database management, and deployment. It also served as a strong academic capstone for CCE106.",
   },
   {
+    slug: "johnny-barber-wordpress",
+    name: "Johnny Barber WordPress Site",
+    shortDescription:
+      "A WordPress barbershop website concept with premium grooming sections, service cards, team profiles, and a reservation-focused user flow.",
+    fullDescription:
+      "Johnny Barber is a WordPress side project created to showcase practical WordPress website-building skills through a polished barbershop experience. The site presents a premium grooming brand with a hero section, service highlights, barber profiles, business information, and a reservation-focused call to action for clients who want to book ahead and be prioritized.",
+    category: "Web",
+    year: "April 2026",
+    yearNumber: 2026,
+    month: "April",
+    monthShort: "Apr",
+    sortDate: "2026-04",
+    technologies: [
+      "WordPress",
+      "PHP",
+      "Elementor",
+    ],
+    demo: "https://johnny-barber.page.gd/",
+    coverImage: "/assets/images/projects/johnny-barber.png",
+    coverAlt: "Johnny Barber WordPress barbershop website preview",
+    problem:
+      "Because some client and company projects cannot be shown publicly due to NDA restrictions, I needed a portfolio-safe project that could still demonstrate my ability to build a polished WordPress business website.",
+    solution:
+      "Designed and built a barbershop website concept for Johnny Barber with premium grooming messaging, service sections, barber profiles, reservation calls to action, and business details that fit a local service-based brand.",
+    outcome:
+      "The project showcases my WordPress skills, visual layout sense, responsive page structure, service business presentation, and ability to create a client-facing website experience even when other real-world work cannot be publicly displayed.",
+  },
+  {
     slug: "realitech",
     name: "Realitech",
     shortDescription:
