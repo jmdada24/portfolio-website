@@ -16,7 +16,7 @@ export const organizations: OrganizationItem[] = [
   {
     name: "University of Mindanao Enigma",
     role: "Tech Committee",
-    period: "2025 — Present",
+    period: "2025 — August 2026",
     description:
       "Support technology-related student initiatives and help in the coordination and execution of organization-led activities, programs, and events.",
   },
