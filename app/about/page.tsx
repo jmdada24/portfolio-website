@@ -1,9 +1,11 @@
 import AboutMe from '@/components/pages/about/AboutMe';
+import Experience from '../../components/pages/about/Experience';
 import Certification from '@/components/pages/about/Certification';
 import Education from '@/components/pages/about/Education';
 import Organization from '@/components/pages/about/Organization';
 import TechStack from '@/components/pages/about/TechStack';
 import Footer from '@/components/Footer';
+
 
 export const metadata = {
   title: "About | John Mhel Dalumpines",
@@ -22,6 +24,7 @@ export default function AboutPage() {
         <AboutMe />
         <Education/>
         <TechStack />
+        <Experience/>
         <Organization/>
         <Certification/>
         
