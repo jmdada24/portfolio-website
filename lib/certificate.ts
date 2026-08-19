@@ -31,6 +31,16 @@ export const certificates: CertificateItem[] = [
     imageAlt: "ITS Certiport Java certificate preview",
     href: "/assets/files/itsjava.pdf",
   },
+   {
+    slug: "cce-certificate-javascript-github",
+    name: "Git and GitHub Workshop and the JavaScript Workshop",
+    issuer: "CCE Skills Clinic",
+    issuedOn: "2026",
+    year: 2026,
+    image:"/assets/images/certificates/CCE_Certificate_JMD.png",
+    imageAlt: "Git and GitHub Workshop & the JavaScript Workshop preview",
+    href: "/assets/files/CCE_Certificate_JMD.pdf",
+  },
 
 ];
 
