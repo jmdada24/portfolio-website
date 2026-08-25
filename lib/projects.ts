@@ -69,8 +69,10 @@ export const projects: Project[] = [
       "Vercel",
       "Clean Architecture",
     ],
+    
     demo: "https://contnental-fitness-gym.vercel.app/",
     github: "https://github.com/jmdada24/contnental-fitness-gym",
+    figma: "https://www.figma.com/design/xFuFkD4elAfKMufDho6rbK/Contnental?node-id=0-1&t=lTCYL3kK7oRYz7U8-1",
     coverImage: "/assets/images/projects/contnental-fitness-gym-project.png",
     coverAlt: "Contnental Fitness Gym Management System project preview",
     problem:
@@ -109,6 +111,7 @@ export const projects: Project[] = [
     ],
     demo: "https://bb-barangay-appointment-system-project.vercel.app/",
     github: "https://github.com/jmdada24/barangay-appointment-system",
+    figma: "https://www.figma.com/design/6tauf85anU8WR7hUDxu1T1/Barangay-Bayabas?t=lTCYL3kK7oRYz7U8-0",
     coverImage: "/assets/images/projects/barangay-project.png",
     coverAlt: "Barangay Bayabas Appointment System project preview",
     problem:
@@ -211,7 +214,7 @@ export const projects: Project[] = [
     yearNumber: 2026,
     month: "March",
     monthShort: "Mar",
-    sortDate: "2026-08",
+    sortDate: "2026-03",
     technologies: [
       "Python",
       "Streamlit",
