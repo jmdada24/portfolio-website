@@ -83,6 +83,43 @@ export const projects: Project[] = [
       "The project demonstrates practical full-stack system design for real gym operations, including multi-role access, centralized branch management, QR-based attendance, online payment workflows, secure activity tracking, clean architecture, Docker-based deployment, and a production path using Render, Vercel, and Supabase PostgreSQL.",
   },
   {
+    slug: "drive-thru-simulation",
+    name: "Drive-Thru Simulation System",
+    shortDescription:
+      "A discrete-event simulation system that models a fast-food drive-thru and evaluates the impact of adding a second service window.",
+    fullDescription:
+      "A discrete-event simulation project inspired by a fast-food drive-thru operation. The system uses a React-based interface with HTML Canvas to visualize vehicle movement and queue behavior, while a FastAPI backend runs the simulation using Python and SimPy.",
+    category: "Web",
+    featured: true,
+    year: "May 2026",
+    yearNumber: 2026,
+    month: "May",
+    monthShort: "May",
+    sortDate: "2026-05",
+    technologies: [
+      "React.js",
+      "CSS",
+      "HTML Canvas",
+      "FastAPI",
+      "Python",
+      "SimPy",
+      "Render",
+      "Vercel"
+      
+  ],
+
+  demo: "https://drive-thru-simulation.vercel.app/",
+  github: "https://github.com/jmdada24/drive-thru-simulation",
+  coverImage: "/assets/images/projects/drive-thru-simulation.png",
+  coverAlt: "Drive-Thru Simulation System project preview",
+  problem:
+    "A fast-food drive-thru operating with a single service window can experience long queues and increased customer waiting times during periods of high demand. Physically testing whether an additional service window would improve the operation can be costly and disruptive. The project addresses this problem by using discrete-event simulation to evaluate the proposed two-window configuration before making changes to the actual operation.",
+  solution:
+    "Developed a discrete-event simulation using Python and SimPy, exposed through a FastAPI backend. The React frontend uses HTML Canvas to visually represent vehicle arrivals, queue formation, service, and departures. The system allows the performance of a single-window drive-thru to be compared with a two-window configuration using simulation metrics such as waiting time, queue length, service utilization, and throughput.",
+  outcome:
+    "The simulation provides a low-cost method for analyzing the potential impact of adding a second service window. By comparing different configurations through simulated customer arrivals and service times, the system can help determine whether the additional window can reduce waiting times, shorten queues, and improve overall drive-thru throughput."
+},
+  {
     slug: "barangaybayabas",
     name: "Barangay Bayabas Appointment System",
     shortDescription:
