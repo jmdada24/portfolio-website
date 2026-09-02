@@ -16,7 +16,7 @@ export const experience: ExperienceItem[] = [
   {
     name: "Freelancing",
     role: "Web Developer / Designer",
-    period: "Present",
+    period: "2025 – Present",
     description:
       "Designed website interfaces in Figma and developed responsive websites using WordPress based on client requirements.",
   },
